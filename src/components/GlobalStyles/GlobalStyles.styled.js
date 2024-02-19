@@ -1,8 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyles = createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
+const GlobalStyles = createGlobalStyle`
     * {
         margin: 0;
         padding: 0;
@@ -10,9 +8,12 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        font-family: "Permanent Marker", cursive;
+        font-family: "Alkatra", system-ui;
         font-size: 1rem;
         font-style: normal;
         font-weight: 400;
+        background-color: lightskyblue;
     }
 `;
+
+export default GlobalStyles;

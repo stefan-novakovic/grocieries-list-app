@@ -1,8 +1,10 @@
+import { StyledHeader } from "./Header.styled";
+
 const Header = () => {
   return (
-    <header>
+    <StyledHeader>
       <h1>Grocieries List</h1>
-    </header>
+    </StyledHeader>
   );
 };
 
