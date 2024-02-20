@@ -29,10 +29,10 @@ export const StyledListItem = styled.li`
   }
 
   & label {
-    display: flex;
     flex-grow: 1;
+    display: flex;
     cursor: pointer;
-    ${({ checked }) => checked && "text-decoration: line-through"}
+    ${({ $checked }) => $checked && "text-decoration: line-through"}
   }
 
   & button {

@@ -47,6 +47,7 @@ export const StyledAddItem = styled.form`
     background-color: ${({ theme }) => theme.colors.inputs_and_button_bg};
     color: ${({ theme }) => theme.colors.text_inputs_and_button};
     border: 3px solid ${({ theme }) => theme.colors.text_inputs_and_button};
+    ${({ $darkmode }) => $darkmode && "border: none"};
     border-radius: ${({ theme }) => theme.border_radius.inputs_and_button};
     cursor: pointer;
     display: grid;

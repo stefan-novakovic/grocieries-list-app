@@ -6,7 +6,7 @@ import DataContext from "../context/DataContext";
 const ListItem = ({ item }) => {
   const { handleCheck, handleDelete } = useContext(DataContext);
   return (
-    <StyledListItem checked={item.checked}>
+    <StyledListItem $checked={item.checked}>
       <input
         type="checkbox"
         id={item.id}

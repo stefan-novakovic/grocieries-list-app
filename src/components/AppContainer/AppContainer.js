@@ -3,30 +3,39 @@ import GlobalStyles from "../GlobalStyles/GlobalStyles.styled";
 import Header from "../Header/Header";
 import ContentContainer from "../ContentContainer/ContentContainer";
 import Footer from "../Footer/Footer";
-import { DataProvider } from "../context/DataContext";
 import { ThemeProvider } from "styled-components";
+import { useContext } from "react";
+import DataContext from "../context/DataContext";
 
 function AppContainer() {
+  const { darkMode } = useContext(DataContext);
   const theme = {
     colors: {
-      body_bg: "lightskyblue",
-      app_container_bg: "whitesmoke",
-      content_container_bg: "whitesmoke",
-      header_footer_bg: "#39ace7",
-      add_search_form_bg: "whitesmoke",
-      inputs_and_button_bg: "lightskyblue",
-      li_bg: "lightskyblue",
-      trash_icon: "whitesmoke",
+      body_bg: darkMode ? "#1b1a55" : "lightskyblue",
+      app_container_bg: darkMode ? "#9290c3" : "whitesmoke",
+      content_container_bg: darkMode ? "#9290c3" : "whitesmoke",
+      header_footer_bg: darkMode ? "#070f2b" : "#39ace7",
+      add_search_form_bg: darkMode ? "#9290c3" : "whitesmoke",
+      inputs_and_button_bg: darkMode ? "#1b1a55" : "lightskyblue",
+      li_bg: darkMode ? "#1b1a55" : "lightskyblue",
+      trash_icon: darkMode ? "rgba(245, 245, 245, 0.85)" : "whitesmoke",
       trash_icon_hover: "red",
-      text_primary: "whitesmoke",
-      text_inputs_and_button: "#0784b5",
-      text_inputs_placeholder: "rgba(7, 132, 181, 0.825)",
-      text_empty_content_container: "lightskyblue",
-      text_primary_shadow: "#0784b5",
-      text_inputs_shadow: "whitesmoke",
+      text_primary: darkMode ? "rgba(245, 245, 245, 0.85)" : "whitesmoke",
+      text_header_footer: darkMode ? "#9290c3" : "whitesmoke",
+      text_inputs_and_button: darkMode
+        ? "rgba(245, 245, 245, 0.85)"
+        : "#0784b5",
+      text_inputs_placeholder: darkMode
+        ? "rgba(245, 245, 245, 0.85)"
+        : "rgba(7, 132, 181, 0.825)",
+      text_empty_content_container: darkMode ? "#1b1a55" : "lightskyblue",
+      text_primary_shadow: darkMode ? "none" : "#0784b5",
+      text_inputs_shadow: darkMode ? "none" : "whitesmoke",
     },
     borders: {
-      header_footer: "0.35rem solid whitesmoke",
+      header_footer: darkMode
+        ? "0.35rem solid #9290c3"
+        : "0.35rem solid whitesmoke",
     },
     border_radius: {
       inputs_and_button: "4px",
@@ -43,10 +52,8 @@ function AppContainer() {
       <StyledAppContainer>
         <GlobalStyles />
         <Header />
-        <DataProvider>
-          <ContentContainer />
-          <Footer />
-        </DataProvider>
+        <ContentContainer />
+        <Footer />
       </StyledAppContainer>
     </ThemeProvider>
   );

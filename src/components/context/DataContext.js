@@ -10,6 +10,9 @@ export const DataProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [addItemInput, setAddItemInput] = useState("");
   const [searchItemInput, setSearchItemInput] = useState("");
+  const [darkMode, setDarkMode] = useState(
+    JSON.parse(localStorage.getItem("darkmode")) || false
+  );
 
   // INITIAL LOAD
   useEffect(() => {
@@ -31,6 +34,11 @@ export const DataProvider = ({ children }) => {
 
     fetchItems();
   }, []);
+
+  // SAVE LIGHT/DARK MODE PREFERENCE
+  useEffect(() => {
+    localStorage.setItem("darkmode", JSON.stringify(darkMode));
+  }, [darkMode]);
 
   const handleCheck = async (id) => {
     const listItem = items.find((item) => item.id === id);
@@ -103,6 +111,8 @@ export const DataProvider = ({ children }) => {
         setSearchItemInput,
         apiError,
         isLoading,
+        darkMode,
+        setDarkMode,
       }}
     >
       {children}

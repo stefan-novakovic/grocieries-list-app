@@ -4,12 +4,12 @@ import { useContext, useRef } from "react";
 import DataContext from "../context/DataContext";
 
 const AddItem = () => {
-  const { handleSubmit, addItemInput, setAddItemInput } =
+  const { handleSubmit, addItemInput, setAddItemInput, darkMode } =
     useContext(DataContext);
 
   const myRef = useRef();
   return (
-    <StyledAddItem onSubmit={handleSubmit}>
+    <StyledAddItem onSubmit={handleSubmit} $darkmode={darkMode}>
       <label htmlFor="addItem">Add Item</label>
       <input
         type="text"
