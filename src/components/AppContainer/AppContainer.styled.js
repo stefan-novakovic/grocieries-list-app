@@ -1,13 +1,9 @@
 import styled from "styled-components";
 
-const StyledAppContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+export const StyledAppContainer = styled.div`
   width: 100%;
   max-width: 820px;
   min-height: 100vh;
   margin-inline: auto;
-  background-color: whitesmoke;
+  background-color: ${({ theme }) => theme.colors.app_container_bg};
 `;
-
-export default StyledAppContainer;

@@ -11,6 +11,7 @@ export const DataProvider = ({ children }) => {
   const [addItemInput, setAddItemInput] = useState("");
   const [searchItemInput, setSearchItemInput] = useState("");
 
+  // INITIAL LOAD
   useEffect(() => {
     const fetchItems = async () => {
       try {

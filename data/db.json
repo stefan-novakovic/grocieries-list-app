@@ -12,12 +12,12 @@
     },
     {
       "id": "3",
-      "checked": true,
+      "checked": false,
       "item": "Pears"
     },
     {
       "id": "4",
-      "checked": false,
+      "checked": true,
       "item": "Milk"
     },
     {

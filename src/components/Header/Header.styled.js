@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const StyledHeader = styled.header`
   width: 100%;
   max-width: 820px;
-  background-color: #39ace7;
-  color: whitesmoke;
-  text-shadow: 0 1px 4px #0784b5;
-  padding: 0.35rem 1.5rem;
-  border-bottom: 0.35rem solid whitesmoke;
+  padding: ${({ theme }) => theme.padding.header_footer};
+  background-color: ${({ theme }) => theme.colors.header_footer_bg};
+  color: ${({ theme }) => theme.colors.text_primary};
+  text-shadow: 0 1px 4px ${({ theme }) => theme.colors.text_primary_shadow};
+  border-bottom: ${({ theme }) => theme.borders.header_footer};
   z-index: 3;
   position: fixed;
   top: 0;

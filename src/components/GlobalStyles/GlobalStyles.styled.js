@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
         font-size: 1rem;
         font-style: normal;
         font-weight: 400;
-        background-color: lightskyblue;
+        background-color: ${({ theme }) => theme.colors.body_bg};
     }
 `;
 
