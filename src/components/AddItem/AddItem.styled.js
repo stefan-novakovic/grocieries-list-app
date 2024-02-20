@@ -12,6 +12,11 @@ export const StyledAddItem = styled.form`
   z-index: 2;
   position: fixed;
 
+  @media screen and (max-width: 767px) {
+    padding-top: calc(3.634875rem + 0.75rem);
+    padding-bottom: 0.5rem;
+  }
+
   & > label {
     position: absolute;
     left: -10000px;
@@ -28,7 +33,6 @@ export const StyledAddItem = styled.form`
     color: #0784b5;
     text-shadow: 0 0 1px whitesmoke;
     border: none;
-
     border-radius: 4px;
   }
 
@@ -48,6 +52,12 @@ export const StyledAddItem = styled.form`
     border: 3px solid #0784b5;
     border-radius: 4px;
     cursor: pointer;
+
+    @media screen and (max-width: 767px) {
+      width: 32px;
+      height: 32px;
+      border: 2px solid #0784b5;
+    }
   }
 
   button:hover,
@@ -62,5 +72,10 @@ export const StyledAddItem = styled.form`
   button svg {
     width: 17px;
     height: 17px;
+
+    @media screen and (max-width: 767px) {
+      width: 14px;
+      height: 14px;
+    }
   }
 `;

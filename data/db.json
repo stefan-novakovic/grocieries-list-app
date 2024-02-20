@@ -12,7 +12,7 @@
     },
     {
       "id": "3",
-      "checked": false,
+      "checked": true,
       "item": "Pears"
     },
     {
@@ -22,13 +22,18 @@
     },
     {
       "id": "5",
-      "checked": false,
+      "checked": true,
       "item": "Cookies"
     },
     {
       "id": "6",
       "checked": false,
       "item": "Cherry"
+    },
+    {
+      "id": "7",
+      "checked": false,
+      "item": "Apples"
     }
   ]
 }

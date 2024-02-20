@@ -7,4 +7,8 @@ export const StyledContentContainer = styled.section`
   font-size: 1.35rem;
   color: #0784b5;
   background-color: whitesmoke;
+
+  @media screen and (max-width: 767px) {
+    font-size: 1rem;
+  }
 `;

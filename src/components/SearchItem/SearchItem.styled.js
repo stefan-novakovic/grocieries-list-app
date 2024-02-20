@@ -12,6 +12,11 @@ export const StyledSearchItem = styled.form`
   z-index: 1;
   position: fixed;
 
+  @media screen and (max-width: 767px) {
+    padding-top: 7.27125rem;
+    padding-bottom: 0.75rem;
+  }
+
   & > label {
     position: absolute;
     left: -10000px;

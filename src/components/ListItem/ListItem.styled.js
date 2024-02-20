@@ -4,7 +4,7 @@ export const StyledListItem = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 0.35rem;
+  margin-bottom: 0.35rem;
   padding: 0.75rem 1rem;
   background-color: lightskyblue;
   color: whitesmoke;
@@ -21,6 +21,11 @@ export const StyledListItem = styled.li`
     width: 22px;
     height: 22px;
     cursor: pointer;
+
+    @media screen and (max-width: 767px) {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   & label {
@@ -54,5 +59,12 @@ export const StyledListItem = styled.li`
     min-width: 28px;
     height: auto;
     min-height: 28px;
+
+    @media screen and (max-width: 767px) {
+      width: 24px;
+      min-width: 24px;
+      height: auto;
+      min-height: 24px;
+    }
   }
 `;

@@ -15,5 +15,10 @@ export const StyledFooter = styled.footer`
     font-size: 1.75rem;
     letter-spacing: 1px;
     text-align: center;
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.25rem;
+      letter-spacing: 0.5px;
+    }
   }
 `;

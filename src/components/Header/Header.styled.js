@@ -17,5 +17,11 @@ export const StyledHeader = styled.header`
     letter-spacing: 3px;
     word-spacing: 2px;
     text-align: center;
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.75rem;
+      letter-spacing: 2px;
+      word-spacing: 1px;
+    }
   }
 `;

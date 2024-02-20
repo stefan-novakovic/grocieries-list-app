@@ -28,9 +28,7 @@ export const DataProvider = ({ children }) => {
       }
     };
 
-    setTimeout(() => {
-      fetchItems();
-    }, 2000);
+    fetchItems();
   }, []);
 
   const handleCheck = async (id) => {
